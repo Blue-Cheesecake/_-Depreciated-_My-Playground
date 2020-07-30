@@ -1,0 +1,35 @@
+base (change by numbers of word)(1 -> 2 -> n)
+set occur = 0 (always set this 0)
+compare base by state (len state must equals to len base)
+vars R = 1
+base from S[0:R] for first
+R + 1
+	  S[0:R] for second
+R + n
+	  S[0:n] for n
+
+state = ''
+for i in range len S: state += S[i]
+if len base == len state : compare
+else : state + i+1 (plus until len base == len state)	
+.
+.
+.
+run till len base == len S
+if base equals to state : occur + 1
+set list = []
+if occur >= M : add base into list (cal in list later)
+for list to which one is the longest
+set count = 0
+if len element > count : count = len element 
+
+a relative numbers that plus is >> len base <<
+
+trying to set base equals to S[0:1] >> done
+trying to set state equals to base
+
+??? right in left out where len state equals to len base ???
+
+test = 'abcdefg'
+need all substring length 2
+= ['ab','bc','cd','de','ef','fg']
