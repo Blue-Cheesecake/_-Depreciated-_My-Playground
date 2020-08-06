@@ -1,18 +1,8 @@
-def findPrimeFactors(num=int):
-    for i in range(2, num+1):
-        if num != 1:
-            if num % i == 0:
-                if i == 2 or i == 3 or i == 5:
-                    while num % i == 0:
-                        num /= i
-                else:
-                    return False
-        else:
-            break
-    return True
-
 
 # another make TLE
+# this is a naive approach
+# try to use dynamic programming
+
 
 def another(num):
     only = [2, 3, 5]
@@ -30,7 +20,6 @@ def Solution(n=int):
     L1 = 2
     L2 = 3
     L3 = 5
-    # try to not using list
     result = 0
     count = 1
     while True:
@@ -50,6 +39,6 @@ def Solution(n=int):
 
 print(Solution(10))
 print(Solution(5))
-print(Solution(125))
-print(Solution(350))
-print(Solution(450))
+print(Solution(150))
+# print(Solution(350))
+# print(Solution(450))
