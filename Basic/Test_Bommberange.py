@@ -1,3 +1,6 @@
+# https://leetcode.com/problems/valid-boomerang/
+
+
 def Solution(b=list):
     a = []
     m1 = None

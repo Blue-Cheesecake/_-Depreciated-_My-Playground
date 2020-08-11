@@ -1,3 +1,6 @@
+# https://leetcode.com/problems/duplicate-zeros/
+
+
 def Solution(arr=list):
     skip = 0
     while skip < len(arr):

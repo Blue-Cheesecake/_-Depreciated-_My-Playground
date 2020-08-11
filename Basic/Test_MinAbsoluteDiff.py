@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/minimum-absolute-difference/
+
 import sys
 
 INI_MAX = sys.maxsize

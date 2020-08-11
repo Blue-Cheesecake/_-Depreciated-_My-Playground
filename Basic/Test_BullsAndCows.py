@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/bulls-and-cows/
+
 # if guess in secret : distinguish that is bull or cow
 # A += 1 if guess is bull (element and index are equal each other)
 # B += 1 if guess is cow (guess in secret but index arent equal and that secret havent used yet)

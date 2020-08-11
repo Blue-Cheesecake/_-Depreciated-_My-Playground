@@ -1,3 +1,6 @@
+# https://leetcode.com/problems/detect-capital/
+
+
 def Solution(word=str):
     result = True
     if word != word.capitalize():
