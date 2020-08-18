@@ -1,0 +1,11 @@
+Fundamentals of Programming
+
+You need to get alteast Grade C
+
+Lab 15% Quiz 25% Mid 25% Final 35%
+
+Writing Code (Semi English)--> .exe --> Run 
+
+--> = Compile
+.exe = Executable File
+Tell computer to understand my code (Code --> Binary Code)
