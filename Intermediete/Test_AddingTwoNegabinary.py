@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/adding-two-negabinary-numbers/
 
 
+# turn list --> number --> plus --> binary
 def plus(arr):
     arr = arr[::-1]
     out = 0
