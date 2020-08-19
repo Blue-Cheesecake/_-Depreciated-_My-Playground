@@ -5,6 +5,7 @@ int main()
 {
     // type arrayName [arraySize ];
     // we can access more dimension array : arr[i][j][...]
+    // types of array must be respected by types of Data (int,float char etc.)
     int numbers[] = {1, 4, 2, 6, 4, 8, 9};
     for (int i = 0; i < 7; i++)
     {
@@ -29,30 +30,30 @@ int main()
             printf("%d, ", numbers[k]);
         }
     }
-    // try to change elements
-    // for (int j = 0; j < 7; j++)
-    // {
-    //     if (numbers[j] % 2 == 0)
-    //     {
-    //         numbers[j] = 0;
-    //     }
-    //     else
-    //     {
-    //         numbers[j] = 1;
-    //     }
-    // }
-    // // it's work
-    // for (int l = 0; l < 7; l++)
-    // {
-    //     if (l == 6)
-    //     {
-    //         printf("%d\n", numbers[l]);
-    //     }
-    //     else
-    //     {
-    //         printf("%d, ", numbers[l]);
-    //     }
-    // }
+    // try to change elements (it's work)
+    for (int j = 0; j < 7; j++)
+    {
+        if (numbers[j] % 2 == 0)
+        {
+            numbers[j] = 0;
+        }
+        else
+        {
+            numbers[j] = 1;
+        }
+    }
+    // it's work
+    for (int l = 0; l < 7; l++)
+    {
+        if (l == 6)
+        {
+            printf("%d\n", numbers[l]);
+        }
+        else
+        {
+            printf("%d, ", numbers[l]);
+        }
+    }
     int temp = numbers[0];
     for (int I = 0; I < 6; I++)
     {
