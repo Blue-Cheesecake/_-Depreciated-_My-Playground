@@ -3,8 +3,8 @@
 int main()
 {
 
-    char s[4] = "OMAW";
-    char hold[4] = " ";
+    char s[5] = "OMAW";
+    char hold[5] = "";
     printf("%s\n", s);
     // assign all s[i] into hold[i]
     for (int i = 0; i < 4; i++)
