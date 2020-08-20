@@ -28,6 +28,7 @@ int min(int num1, int num2)
     return result;
 }
 
+// how ever, C already has power function
 int pow(int num, int k)
 {
     int result = 1;
@@ -37,6 +38,7 @@ int pow(int num, int k)
     }
     return result;
 }
+
 int main()
 {
     printf("Changed\n");

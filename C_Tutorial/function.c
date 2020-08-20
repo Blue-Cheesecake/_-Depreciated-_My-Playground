@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Actually, functions should be declared over here before using them on main function.
+
 int main()
 {
     int plus;
