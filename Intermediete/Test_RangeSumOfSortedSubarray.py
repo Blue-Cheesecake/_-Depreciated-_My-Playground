@@ -1,8 +1,11 @@
+# https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/
+
 def Solution(nums=list, n=int, left=int, right=int):
     RangeSub = []
     indx = 0
     while indx <= n:
         add = 0
+        # find sum of index to n 0 01 012 0123 01234, 1 12 1234 and so on
         for i in range(indx, n):
             add += sum(nums[indx:i+1])
             RangeSub.append(add)
