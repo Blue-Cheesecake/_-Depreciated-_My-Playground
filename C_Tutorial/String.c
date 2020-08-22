@@ -13,7 +13,6 @@ int main()
         printf("%c\n", s[i]);
     }
     // expect OMAW
-    // but instead OMAWOMAW is executed
     // try to printout as %s with out loop
     printf("%s\n", hold);
     // this loop is print out correctly

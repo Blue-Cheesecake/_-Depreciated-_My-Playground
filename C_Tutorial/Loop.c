@@ -4,8 +4,9 @@
 int main()
 {
     /* local variable definition */
-    int a = 10;
     /* do loop execution */
+    // do, while and for is going to loop if condition is True, if in loop cause condition is False, it will  be stopped immidietly
+    int a = 10;
     do
     {
         if (a == 15)
@@ -19,15 +20,16 @@ int main()
             a += 1;
         }
 
+    } while (a < 20); // condition <---
+    // code in loop will do untill a >= 20
+    do
+    {
+        if (a != 15)
+        {
+            printf("value of a: %d\n", a);
+        }
+        a += 1;
     } while (a < 20);
-    // do
-    // {
-    //     if (a != 15)
-    //     {
-    //         printf("value of a: %d\n", a);
-    //     }
-    //     a += 1;
-    // } while (a < 20);
 
     int b = 10;
     do
@@ -38,6 +40,7 @@ int main()
         }
         b += 1;
     } while (b < 20);
+    // initilize with i = 10 and do code untill i < 20
     for (int i = 10; i < 20; i++)
     {
         if (i != 15)
