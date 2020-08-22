@@ -1,3 +1,5 @@
+// # https://leetcode.com/problems/max-consecutive-ones/
+
 #include <stdio.h>
 
 int max(int num1, int num2)

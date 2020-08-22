@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/the-kth-factor-of-n/
+
 def Solution(n=int, k=int):
     facth = 0
     for i in range(1, n+1):
