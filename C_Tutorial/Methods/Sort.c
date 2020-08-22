@@ -26,6 +26,14 @@ int main()
     {
         printf("%d ", array[i]);
     }
+    printf("\n");
+    // expect 10 21 28 43 54 76 76 98
+    int array2[8] = {10, 54, 76, 28, 98, 43, 76, 21};
+    Sort(array2, 8);
+    for (int j = 0; j < 8; j++)
+    {
+        printf("%d ", array2[j]);
+    }
     /*6 8 2 4 9 1 2 6
     2 8 6 4 9 1 2 6
     1 8 6 4 9 2 2 6
