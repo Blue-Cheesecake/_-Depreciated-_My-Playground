@@ -1,7 +1,6 @@
 #include <stdio.h>
-#define MAX_SIZE 100
 
-void RoratedLeft(int *array[MAX_SIZE], int size)
+void RoratedLeft(int *array, int size)
 {
     int temp = array[0];
     for (int i = 0; i < size - 1; i++)
@@ -12,7 +11,7 @@ void RoratedLeft(int *array[MAX_SIZE], int size)
 }
 // in the other hand, Rotate to the right is the same concept
 
-void RotatedRight(int *array[MAX_SIZE], int size)
+void RotatedRight(int *array, int size)
 {
     int temp = array[size - 1];
     for (int i = size - 1; i > 0; i--)

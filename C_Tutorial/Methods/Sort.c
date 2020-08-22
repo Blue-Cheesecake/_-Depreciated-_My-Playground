@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void Sort(int array[], int n)
+void Sort(int *array, int n)
 {
     int tmp;
     for (int i = 0; i < n; i++)
