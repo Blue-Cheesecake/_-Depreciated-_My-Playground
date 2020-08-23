@@ -1,5 +1,8 @@
+// https://leetcode.com/problems/remove-element/
+
 #include <stdio.h>
 
+// method for remove element by index
 void pop(int index, int *nums, int numSize)
 {
     for (int i = 0; i < numSize; i++)
@@ -34,7 +37,7 @@ int Solution(int *nums, int numSize, int val)
 
 int main()
 {
-    // if we just print out there is not problems but I need to modify array correctly
+    // if we just print out there is no problems because it can be printed in actualsize after remove element but I need to modify array correctly
     int t1[4] = {3, 2, 2, 3};
     int val1 = 3;
     int ActualSize = Solution(t1, 4, val1);
