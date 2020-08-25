@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/
+
 #include <stdio.h>
 
 int max(int num1, int num2)

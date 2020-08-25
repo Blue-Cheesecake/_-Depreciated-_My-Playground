@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/
+
 def Solution(arr=list):
     maxSoFar = arr[len(arr) - 1]
     arr[len(arr) - 1] = -1
