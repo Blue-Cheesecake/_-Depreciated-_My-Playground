@@ -29,10 +29,12 @@ void Solution(int *A, int size)
     {
         merge[j] = even[j];
     }
-    for (int k = j; k < actualOddSize; k++)
+    // fix with initialil temp variable for odd start at index 0
+    for (int k = j, i = 0; i < actualOddSize; k++, i++)
     {
-        merge[k] = odd[j];
+        merge[k] = odd[i];
     }
+
     for (int l = 0; l < size; l++)
     {
         A[l] = merge[l];
