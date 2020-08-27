@@ -1,3 +1,5 @@
+// https://leetcode.com/explore/featured/card/fun-with-arrays/523/conclusion/3228/
+
 #include <stdio.h>
 
 void sort(int *arr, int size)
