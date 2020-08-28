@@ -2,7 +2,13 @@
 
 int main()
 {
+    // char varName[MaximumSizeOfString]
+    char string[20];
+    // input string
+    scanf(" %s", &string);
+    printf("%s\n", string);
 
+    // copy string into another variable
     char s[5] = "OMAW";
     char hold[5] = "";
     printf("%s\n", s);
@@ -12,7 +18,6 @@ int main()
         hold[i] = s[i];
         printf("%c\n", s[i]);
     }
-    // expect OMAW
     // try to printout as %s with out loop
     printf("%s\n", hold);
     // this loop is print out correctly
