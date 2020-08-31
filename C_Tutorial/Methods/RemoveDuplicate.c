@@ -3,51 +3,65 @@
 for i in range len origin
     if origin[i] not in  hold
         add origin[i] into hold
+assign hold element into original list
 */
-// In C might be a little bit complex
-int main()
+
+// return new size
+int removeDuplicate(int *list, int n)
 {
-    // expected output is 1 2 0 3 4 5 6 7 8
-    int array[] = {1, 2, 0, 2, 3, 4, 5, 6, 7, 7, 0, 8};
-    int size = 12;
-    // maximum size of hold must not more exceed length of array
-    char hold[12] = {};
-    // define all element in hold = NULL
-    for (int first = 0; first < 12; first++)
+    // try not to use sort method
+    // In-place array in its original order
+    // insert all element in hold to NULL
+    int newSize = 0;
+    int hold[n];
+    for (int set = 0; set < n; set++)
     {
-        hold[first] = 'N';
+        hold[n] = 'N';
     }
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < n; i++)
     {
-        // if array[i] not in hold --> add
+        // if j not in hold --> add
         int add = 1;
-        for (int j = 0; j < size; j++)
+        for (int j = 0; j < newSize; j++)
         {
-            if (array[i] == hold[j])
+            if (hold[j] == list[i])
             {
                 add = 0;
-                break;
             }
         }
         if (add == 1)
         {
-            for (int k = 0; k < size; k++)
-            {
-                if (hold[k] == 'N')
-                {
-                    hold[k] = array[i];
-                    break;
-                }
-            }
+            hold[newSize] = list[i];
+            newSize += 1;
         }
     }
-
-    for (int element = 0; element < size; element++)
+    // we got perfect element in hold
+    // define all element in list == NULL
+    for (int nu = 0; nu < newSize + 1; nu++)
     {
-        if (hold[element] != 'N')
-        {
-            printf("%d ", hold[element]);
-        }
+        list[nu] = hold[nu];
+    }
+
+    return newSize;
+}
+
+int main()
+{
+    // expected output is 1 2 0 3 4 5 6 7 8
+    int array[12] = {1, 2, 0, 2, 3, 4, 5, 6, 7, 7, 0, 8};
+    int size = 12;
+    int new = removeDuplicate(array, size);
+    for (int i = 0; i < new; i++)
+    {
+        printf("%d ", array[i]);
+    }
+    // expected output is 1 6 4 2 8 3
+    int arrayA[10] = {1, 6, 4, 2, 6, 1, 8, 8, 3, 2};
+    int newA = removeDuplicate(arrayA, 10);
+    printf("\n");
+    for (int j = 0; j < newA; j++)
+    {
+        printf("%d ", arrayA[j]);
     }
 
     return 0;
