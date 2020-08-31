@@ -17,6 +17,7 @@ void reverse(int *list, int n)
         index -= 1;
     }
     index = n / 2;
+    // separate in case odd and even
     int eo;
     if (n % 2 == 0)
     {
