@@ -67,18 +67,6 @@ void get(int num)
     }
 }
 
-void printDidits(int num)
-{
-    num = reversedLenStr(num);
-    int i = 1;
-    while (num > 0)
-    {
-        int rev = num % (powerd(10, i));
-        get(reversedLenStr(rev));
-        num -= rev;
-        i += 1;
-    }
-}
 int lenStr(int x)
 {
     if (x == 0)
@@ -96,6 +84,36 @@ int lenStr(int x)
     return count;
 }
 
+void printDidits(int num)
+{
+    int zeroAtLast = 0;
+    if (num % 10 == 0)
+    {
+        num += 1;
+        zeroAtLast = 1;
+    }
+    int max = lenStr(num);
+    num = reversedLenStr(num);
+    if (zeroAtLast == 1)
+    {
+        max -= 1;
+    }
+    int i = 1;
+    int count = 0;
+    while (count != max)
+    {
+        int rev = num % (powerd(10, i));
+        get(reversedLenStr(rev));
+        num -= rev;
+        i += 1;
+        count += 1;
+    }
+    if (zeroAtLast == 1)
+    {
+        printf("zero");
+    }
+}
+
 int main()
 {
     // this process only works well if the last digit is not 0
@@ -103,7 +121,7 @@ int main()
     printf("\n");
     printDidits(21045);
     printf("\n");
-    printDidits(1001);
+    printDidits(1000);
 
     return 0;
 }
