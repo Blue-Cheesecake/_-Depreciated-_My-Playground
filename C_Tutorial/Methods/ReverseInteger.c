@@ -116,7 +116,7 @@ void printDidits(int num)
 
 int main()
 {
-    // this process only works well if the last digit is not 0
+
     printDidits(6432);
     printf("\n");
     printDidits(21045);
