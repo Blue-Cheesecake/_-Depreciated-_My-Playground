@@ -3,7 +3,7 @@
 // index -->
 // Menu function = line 12
 // The BookTable function is done
-// ***Bug --> On order food and dring --> there are no scanf confirm
+// ***Bug --> On order food and dring --> there are no scanf confirm on line 316
 // **remember when clear the bill each Table
 // **The bill should display separately each Table
 
@@ -12,8 +12,8 @@
 int statusOfTable[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 // total discound for table
 int totalTable[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-char equal[] = "===================";
-char hyphen[] = "--------------------";
+char equal[] = "=============================================================";
+char hyphen[] = "-------------------------------------------------------------";
 // temporary hold food and drink for printing out temporaring after order
 int food[4] = {0, 0, 0, 0};
 int drink[4] = {0, 0, 0, 0};
@@ -28,6 +28,7 @@ void interfaceMainMenu()
     // interface
     printf("%s\nICT Restaurant System\n%s\n", equal, equal);
     printf("[1] Book a table\n[2] Order food & drink\n[3] Display and clear a bill\n[0] Exit\n");
+    printf("%s\n", hyphen);
     printf("Enter the choice: ");
 }
 
@@ -79,7 +80,7 @@ void bookTable()
         {
             // after select a table go back and ask nums of people
             // it must represent Occupied , Available, or Not enough seat
-            printf("%s\nList of tables               Status\n%s\n", equal, equal);
+            printf("%s\nList of tables            Status\n%s\n", equal, equal);
             printf("Table 1: 2 seat          %s\n", printStatus(statusOfTable[0], numberOfPeople, 1));
             printf("Table 2: 2 seat          %s\n", printStatus(statusOfTable[1], numberOfPeople, 2));
             printf("Table 3: 2 seat          %s\n", printStatus(statusOfTable[2], numberOfPeople, 3));
@@ -140,9 +141,14 @@ void bookTable()
     } while (numberOfPeople != 0);
 }
 
+void addingToClearBill(int lt, int fd, int quality)
+{
+    FaDTable[lt][fd] = quality;
+}
+
 void foodMenu(int labelTable)
 {
-    printf("%s\nFood Menu                   Price(Bath)\n", hyphen);
+    printf("\nFood Menu                       Price(Bath)\n%s\n", hyphen);
     printf("[1] Kao pad dog                 45.0\n");
     printf("[2] Squid                       45.0\n");
     printf("[3] Kung                        55.0\n");
@@ -176,15 +182,17 @@ void foodMenu(int labelTable)
         }
         else
         {
-            printf("Invalid choice\n");
+            if (choice != 0)
+            {
+                printf("Invalid choice\n");
+            }
         }
-
     } while (choice != 0);
 }
 
 void drinkMenu(int labelTable)
 {
-    printf("%s\nDrink Menu                    Price(Bath)\n", hyphen);
+    printf("\nDrink Menu                        Price(Bath)\n%s\n", hyphen);
     printf("[1] Coca cola                     15.0\n");
     printf("[2] Pepsi                         25.0\n");
     printf("[3] LEO                           60.0\n");
@@ -218,7 +226,10 @@ void drinkMenu(int labelTable)
         }
         else
         {
-            printf("Invalid choice\n");
+            if (choice != 0)
+            {
+                printf("Invalid choice\n");
+            }
         }
     } while (choice != 0);
 }
@@ -313,10 +324,10 @@ void orderFood()
                             }
                         }
                     }
-                    char confirm;
-                    printf("Confirm? (y|n): ");
-                    scanf("%c", &confirm);
-                    if (confirm == 'y')
+                    int confirm;
+                    printf("Confirm? (y|n) (1 for yes, 0 for no): ");
+                    scanf("%d", &confirm);
+                    if (confirm == 1)
                     {
                         for (int j = 0; j < 4; j++)
                         {
@@ -325,16 +336,20 @@ void orderFood()
                                 switch (j)
                                 {
                                 case 0:
-                                    totalTable[orderTable - 1] += (j * 45);
+                                    totalTable[orderTable - 1] += (food[j] * 45);
+                                    addingToClearBill(orderTable - 1, 0, food[j]);
                                     break;
                                 case 1:
-                                    totalTable[orderTable - 1] += (j * 45);
+                                    totalTable[orderTable - 1] += (food[j] * 45);
+                                    addingToClearBill(orderTable - 1, 1, food[j]);
                                     break;
                                 case 2:
-                                    totalTable[orderTable - 1] += (j * 55);
+                                    totalTable[orderTable - 1] += (food[j] * 55);
+                                    addingToClearBill(orderTable - 1, 2, food[j]);
                                     break;
                                 case 3:
-                                    totalTable[orderTable - 1] += (j * 1);
+                                    totalTable[orderTable - 1] += (food[j] * 1);
+                                    addingToClearBill(orderTable - 1, 3, food[j]);
                                     break;
                                 default:
                                     break;
@@ -345,16 +360,20 @@ void orderFood()
                                 switch (j)
                                 {
                                 case 0:
-                                    totalTable[orderTable - 1] += (j * 15);
+                                    totalTable[orderTable - 1] += (drink[j] * 15);
+                                    addingToClearBill(orderTable - 1, 4, drink[j]);
                                     break;
                                 case 1:
-                                    totalTable[orderTable - 1] += (j * 25);
+                                    totalTable[orderTable - 1] += (drink[j] * 25);
+                                    addingToClearBill(orderTable - 1, 5, drink[j]);
                                     break;
                                 case 2:
-                                    totalTable[orderTable - 1] += (j * 60);
+                                    totalTable[orderTable - 1] += (drink[j] * 60);
+                                    addingToClearBill(orderTable - 1, 6, drink[j]);
                                     break;
                                 case 3:
-                                    totalTable[orderTable - 1] += (j * 80);
+                                    totalTable[orderTable - 1] += (drink[j] * 80);
+                                    addingToClearBill(orderTable - 1, 7, drink[j]);
                                     break;
                                 default:
                                     break;
@@ -369,6 +388,7 @@ void orderFood()
                         food[j] = 0;
                         drink[j] = 0;
                     }
+                    orderTable = 0;
                 }
                 else
                 {
@@ -378,6 +398,158 @@ void orderFood()
             else
             {
                 printf("Invalid\n");
+            }
+
+        } while (orderTable != 0);
+    }
+}
+
+// clear a bill each table
+void displayAndClearABill()
+{
+    // checl if occupied or not
+    int occupied = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        if (statusOfTable[i] == 1)
+        {
+            occupied = 1;
+        }
+    }
+    if (occupied == 0)
+    {
+        printf("You must book a table first\n");
+    }
+    else
+    {
+        printf("[Display and clear a bill]\n\n");
+        printf("List of occupied table:\n");
+        for (int i = 0; i < 10; i++)
+        {
+            if (statusOfTable[i] == 1)
+            {
+                printf("Table %d\n", i + 1);
+            }
+        }
+        int orderTable;
+        do
+        {
+            printf("Enter the table number [1-10] (0 to exit): ");
+            scanf("%d", &orderTable);
+            if (orderTable >= 1 && orderTable <= 10)
+            {
+                if (statusOfTable[orderTable - 1] == 1)
+                {
+                    // check if order Table atleast order Food or drink
+                    int atleastForD = 0;
+                    for (int k = 0; k < 8; k++)
+                    {
+                        if (FaDTable[orderTable - 1][k] > 0)
+                        {
+                            atleastForD = 1;
+                        }
+                    }
+                    if (atleastForD == 0)
+                    {
+                        printf("\nThere is no any ordered food or drink\n");
+                    }
+                    else
+                    {
+                        printf("\nYou have order the following:\n\n");
+                        printf("Food menu                    Qty.   Price (Bath)\n%s\n", hyphen);
+                        int atleastFood = 0;
+                        for (int i = 0; i < 4; i++)
+                        {
+                            if (FaDTable[orderTable - 1][i] != 0)
+                            {
+                                atleastFood = 1;
+                                int qty = FaDTable[orderTable - 1][i];
+                                switch (i)
+                                {
+                                case 0:
+                                    printf("[%d] Kao pad dog               %d     %d\n", i + 1, qty, qty * 45);
+                                    break;
+                                case 1:
+                                    printf("[%d] Squid                     %d     %d\n", i + 1, qty, qty * 45);
+                                    break;
+                                case 2:
+                                    printf("[%d] Kung                      %d     %d\n", i + 1, qty, qty * 55);
+                                    break;
+                                case 3:
+                                    printf("[%d] Sushi                     %d     %d\n", i + 1, qty, qty * 1);
+                                    break;
+                                default:
+                                    break;
+                                }
+                            }
+                        }
+                        if (atleastFood == 0)
+                        {
+                            printf("None\n");
+                        }
+                        printf("%s\n\n", hyphen);
+                        printf("Drink menu                   Qty.   Price (Bath)\n%s\n", hyphen);
+                        int atleastDrink = 0;
+                        for (int j = 4; j < 8; j++)
+                        {
+                            if (FaDTable[orderTable - 1][j] != 0)
+                            {
+                                atleastDrink = 1;
+                                int qty = FaDTable[orderTable - 1][j];
+                                switch (j)
+                                {
+                                case 4:
+                                    printf("[%d] Coca cola                 %d     %d\n", j - 3, qty, qty * 15);
+                                    break;
+                                case 5:
+                                    printf("[%d] Pepsi                     %d     %d\n", j - 3, qty, qty * 25);
+                                    break;
+                                case 6:
+                                    printf("[%d] Leo                       %d     %d\n", j - 3, qty, qty * 60);
+                                    break;
+                                case 7:
+                                    printf("[%d] Chang                     %d     %d\n", j - 3, qty, qty * 80);
+                                    break;
+                                default:
+                                    break;
+                                }
+                            }
+                        }
+                        if (atleastDrink == 0)
+                        {
+                            printf("None\n");
+                        }
+                        printf("%s\n\n", hyphen);
+                        printf("** Total amount: %d\n\n", totalTable[orderTable - 1]);
+                        int confirm;
+                        printf("Do you want to clear a bill? (y|n) (1 for yes, 0 for no): ");
+                        scanf("%d", &confirm);
+                        printf("\n");
+                        if (confirm == 1)
+                        {
+                            // reset occupied, total, and order in FaDTable
+                            totalTable[orderTable - 1] = 0;
+                            for (int fd = 0; fd < 8; fd++)
+                            {
+                                FaDTable[orderTable][fd] = 0;
+                            }
+                            statusOfTable[orderTable - 1] = 0;
+                            orderTable = 0;
+                        }
+                        else
+                        {
+                            orderTable = 0;
+                        }
+                    }
+                }
+                else
+                {
+                    printf("You must occupied this table first\n");
+                }
+            }
+            else
+            {
+                printf("Invalid table\n");
             }
 
         } while (orderTable != 0);
@@ -409,7 +581,7 @@ int main()
             }
             else if (choice == 3)
             {
-                printf("Clear");
+                displayAndClearABill();
             }
             else
             {
@@ -417,10 +589,5 @@ int main()
             }
         }
     }
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d %d\n", statusOfTable[i], totalTable[i]);
-    }
-
     return 0;
 }
