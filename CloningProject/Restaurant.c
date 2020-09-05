@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-// index -->
-// Menu function = line 12
-// The BookTable function is done
-// ***Bug --> On order food and dring --> there are no scanf confirm on line 316
-// **remember when clear the bill each Table
-// **The bill should display separately each Table
-
 // 0 = available, 1 = occupied
 // seat 2 2 2 2 4 4 4 4 8 8
 int statusOfTable[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
