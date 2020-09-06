@@ -317,10 +317,10 @@ void orderFood()
                             }
                         }
                     }
-                    int confirm;
-                    printf("Confirm? (y|n) (1 for yes, 0 for no): ");
-                    scanf("%d", &confirm);
-                    if (confirm == 1)
+                    char confirm;
+                    printf("Confirm? (y|n): ");
+                    scanf(" %c", &confirm);
+                    if (confirm == 'y')
                     {
                         for (int j = 0; j < 4; j++)
                         {
@@ -514,11 +514,11 @@ void displayAndClearABill()
                         }
                         printf("%s\n\n", hyphen);
                         printf("** Total amount: %d\n\n", totalTable[orderTable - 1]);
-                        int confirm;
-                        printf("Do you want to clear a bill? (y|n) (1 for yes, 0 for no): ");
-                        scanf("%d", &confirm);
+                        char confirm;
+                        printf("Do you want to clear a bill? (y|n): ");
+                        scanf(" %c", &confirm);
                         printf("\n");
-                        if (confirm == 1)
+                        if (confirm == 'y')
                         {
                             // reset occupied, total, and order in FaDTable
                             totalTable[orderTable - 1] = 0;
