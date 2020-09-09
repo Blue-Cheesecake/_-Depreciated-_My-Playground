@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// More ways to do --> https://github.com/Blue-Cheesecake/Test/blob/master/Learn/Recursion/Test_ReverseString.c
+// To see more ways to do --> https://github.com/Blue-Cheesecake/Test/blob/master/Learn/Algorithms/Recursion/Test_ReverseString.c
 
 // separate it into half
 void reverse(int *list, int n)
