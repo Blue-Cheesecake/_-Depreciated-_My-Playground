@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 // Recursion means the function that call its function itself.
+
+// More description --> https://github.com/Blue-Cheesecake/Test/blob/master/Learn/Recursion/Test_ReverseString.c
+
 int BinarySearch(int array[], int low, int high, int find)
 {
     int mid = (high + low) / 2;
