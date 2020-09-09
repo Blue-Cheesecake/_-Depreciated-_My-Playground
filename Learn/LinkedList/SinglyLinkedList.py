@@ -4,7 +4,7 @@
 
 # Each node in a singly-linked list contains not only the value but also a -> reference field <- to link to the next node. By this way, the singly-linked list organizes all the nodes in a sequence.
 
-# Opearation
+# --> Opearation
 # Unlike the array, we are not able to access a random element in a singly-linked list in constant time. If we want to get the ith element, we have to traverse from the head node one by one. It takes us O(N) time on average to --> visit an element by index <--, where N is the length of the linked list.
 
 # [23,  ---]--->  [6,  ---]---> [15,  ---] ---> ...
