@@ -1,6 +1,41 @@
 #include <stdio.h>
 
-// To see more ways to do --> https://github.com/Blue-Cheesecake/Test/blob/master/Learn/Algorithms/Recursion/Test_ReverseString.c
+void recursinInPlace(int *s, int left, int right)
+{
+    //  implement recursive function which receives two pointers, left and right, as arguments.
+    //  Base case: if left >= right, do nothing.
+    //  Otherwise, swap s[left] and s[right] and call helper(left + 1, right - 1).
+    // To solve the problem, passing the head and tail indexes as arguments: return helper(0, len(s) - 1).
+    if (left >= right)
+    {
+        // pass
+    }
+    else
+    {
+        // swap
+        int temp = s[left];
+        s[left] = s[right];
+        s[right] = temp;
+        recursinInPlace(s, left + 1, right - 1);
+    }
+}
+
+int twoPointersIteration(int *s, int sSize)
+{
+    // initial left = the first index, right = the last index
+    int left = 0;
+    int right = sSize - 1;
+    while (left < right)
+    {
+        // swap
+        int temp = s[left];
+        s[left] = s[right];
+        s[right] = temp;
+        // move to the next index
+        left += 1;
+        right -= 1;
+    }
+}
 
 // separate it into half
 void reverse(int *list, int n)
