@@ -1,8 +1,23 @@
 #include <stdio.h>
 
+// print
+/*
+        *
+       ***
+      *****
+     *******
+    *********
+   ***********
+  *************
+ ***************
+*****************
+
+*/
+
+// the base of pyramid is based on non-negative odd number
 int main()
 {
-    // input must be odd number
+    // input n can be arbitary non-negative odd number
     int n = 17;
     int space = 0;
     int temp = n;
