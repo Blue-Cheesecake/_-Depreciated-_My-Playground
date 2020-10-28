@@ -1,5 +1,12 @@
 {
     "python.pythonPath": "C:\\Users\\S_Wpi\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
     "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "files.associations": {
+        "cmath": "c",
+        "cstdlib": "c"
+    },
+    // "terminal.external.osxExec": "iTerm.app",
+    // "terminal.integrated.shell.osx": "/bin/zsh",
+    // "terminal.integrated.fontFamily": "D2Coding",
 }
