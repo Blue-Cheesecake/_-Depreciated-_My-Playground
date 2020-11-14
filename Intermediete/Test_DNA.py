@@ -1,3 +1,5 @@
+# https://www.programming.in.th/task/rev2_problem.php?pid=1019
+
 class Solution:
     def longestDNA(self, dna1, dna2):
         # strict dna1 is the longest DNA
