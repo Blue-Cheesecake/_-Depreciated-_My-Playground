@@ -15,12 +15,12 @@ class Solution:
                 while compareDna1 == compareDna2 and len_to_cmp <= len(dna2):
                     tempResult = compareDna1
                     len_to_cmp += 1
-                    if len_to_cmp > len(dna2):
-                        break
                     compareDna1 = dna1[idx_dna1:idx_dna1 + len_to_cmp]
                     compareDna2 = dna2[idx_dna2:idx_dna2 + len_to_cmp]
                     if len(tempResult) > len(result):
                         result = tempResult
+                    if len_to_cmp > len(dna2):
+                        break
                 idx_dna2 += 1
         return result
 
