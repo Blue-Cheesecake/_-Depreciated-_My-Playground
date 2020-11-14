@@ -69,12 +69,17 @@ void longestDNA(char *dna1, char *dna2)
 
 int main()
 {
-    char dna1_1[200] = "CTGAATCTACTGCTATTGCAA";
-    char dna2_1[200] = "AAAACTGCTACCGGT";
-    longestDNA(dna1_1, dna2_1);
-    printf("\n");
-    char dna1_2[200] = "AAACTGCACACTGTGTGGGGGACTGG";
-    char dna2_2[200] = "ACTGTGTGTGACACTGACAGTGACTGGGACTGAAGGGGGGG";
-    longestDNA(dna1_2, dna2_2);
+    char dna1[201];
+    char dna2[202];
+    scanf("%s", dna1);
+    scanf("%s", dna2);
+    longestDNA(dna1, dna2);
+    // char dna1_1[200] = "CTGAATCTACTGCTATTGCAA";
+    // char dna2_1[200] = "AAAACTGCTACCGGT";
+    // longestDNA(dna1_1, dna2_1);
+    // printf("\n");
+    // char dna1_2[200] = "AAACTGCACACTGTGTGGGGGACTGG";
+    // char dna2_2[200] = "ACTGTGTGTGACACTGACAGTGACTGGGACTGAAGGGGGGG";
+    // longestDNA(dna1_2, dna2_2);
     return 0;
 }
