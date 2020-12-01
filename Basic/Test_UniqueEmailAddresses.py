@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/unique-email-addresses/
+
 class Solution:
     def numUniqueEmails(self, emails: list) -> int:
         # TODO clean local name

@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/
+
 class Solution:
     def arrayStringsAreEqual(self, word1: list, word2: list) -> bool:
         # TODO construct word1 and word2
