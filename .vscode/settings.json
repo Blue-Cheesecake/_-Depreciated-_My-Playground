@@ -4,7 +4,9 @@
     "python.linting.enabled": true,
     "files.associations": {
         "cmath": "c",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "algorithm": "c",
+        "sstream": "c"
     },
     // "terminal.external.osxExec": "iTerm.app",
     // "terminal.integrated.shell.osx": "/bin/zsh",
