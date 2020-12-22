@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\S_Wpi\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+    "python.pythonPath": "/usr/bin/python3",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "files.associations": {
@@ -7,6 +7,12 @@
         "cstdlib": "c",
         "algorithm": "c",
         "sstream": "c"
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     // "terminal.external.osxExec": "iTerm.app",
     // "terminal.integrated.shell.osx": "/bin/zsh",
