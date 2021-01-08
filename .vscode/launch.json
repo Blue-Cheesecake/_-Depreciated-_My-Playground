@@ -6,10 +6,87 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch GFG",
+            "name": "Launch Solution",
             "request": "launch",
-            "mainClass": "Learn.Java.GFG",
-            "projectName": "Test_2e053ef7"
+            "mainClass": "Learn.Java.Solution",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mucie",
+            "request": "launch",
+            "mainClass": "Mucie",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch T",
+            "request": "launch",
+            "mainClass": "Learn.Java.T",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch cfe",
+            "request": "launch",
+            "mainClass": "Learn.Java.cfe",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch Td",
+            "request": "launch",
+            "mainClass": "Learn.Java.Td",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch Scann",
+            "request": "launch",
+            "mainClass": "Learn.Java.Scann",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch Modifiers",
+            "request": "launch",
+            "mainClass": "Learn.Java.Modifiers",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch Contruct",
+            "request": "launch",
+            "mainClass": "Learn.Java.Contruct",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch LinkedList",
+            "request": "launch",
+            "mainClass": "Learn.Java.LinkedList",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch NodeL",
+            "request": "launch",
+            "mainClass": "Learn.Java.NodeL",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch Template",
+            "request": "launch",
+            "mainClass": "Learn.Java.Template",
+            "projectName": "Test_c50538bc"
+        },
+        {
+            "type": "java",
+            "name": "Launch cb",
+            "request": "launch",
+            "mainClass": "Learn.Java.cb",
+            "projectName": "Test_c50538bc"
         },
         {
             "type": "java",
