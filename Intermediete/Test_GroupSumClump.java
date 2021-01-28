@@ -2,7 +2,7 @@
 
 package Intermediete;
 
-public class Test_groupSumClump {
+public class Test_GroupSumClump {
 
     public boolean groupSumClump(int start, int[] nums, int target) {
 

@@ -2,7 +2,7 @@
 
 package Intermediete;
 
-public class Test_groupSum5 {
+public class Test_GroupSum5 {
 
     public boolean groupSum5(int start, int[] nums, int target) {
 
