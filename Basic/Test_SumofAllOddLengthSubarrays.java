@@ -1,3 +1,5 @@
+package Basic;
+
 public class Test_SumofAllOddLengthSubarrays {
 
     public int sumOddLengthSubarrays(int[] arr) {
