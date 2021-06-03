@@ -1,5 +1,5 @@
 # (Depreciated Repository)
-This repository was originally created for practicing using Github. Now, My-Playground repo will be no longer used anymore
+This repository was originally created for practicing using Github. Now, My-Playground repo will be no longer used anymore.
 Since almost problems are from Leetcode website, you can still follow me solving problems via my Leetcode profile, https://leetcode.com/CC_CheeseCake/.
 
 # Test
